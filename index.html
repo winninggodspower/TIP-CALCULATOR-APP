@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./customstyles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style> 
+    *{
+      box-sizing: border-box !important;
+      font-family: 'Space Mono', monospace;
+    }
+    
+    input{
+      background-color: hsl(189, 41%, 97%);
+    }
+
+    .box{
+      background-color: hsl(189, 41%, 97%);
+      color: hsl(184, 14%, 56%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-light-cyan w-[100vw] h-[100vh] flex justify-center items-center">
+    <div class="inner-container bg-white h-fit w-[100%] rounded-lg md:w-[85%] grid sm:grid-cols-2 sm:mx-2">
+
+      <div class="input mx-16 mt-16 sm:mt-10">
+        <div class="inner">
+          <div class="mb-10">
+            <span class="text-gray-cyan">Bill</span>
+            <div class="relative w-[100]">
+              <span class="absolute left-3 bottom-3"><img src="./images/icon-dollar.svg" alt=""></span>
+              <input type="number"
+                class="p-1 text-[24px] text-right text-dark-cyan rounded w-[100%] hover:ring-2 hover:ring-primary focus:outline-none  cursor-pointer" >
+            </div>
+          </div>
+          <div class="mb-10">
+            <span class="text-gray-cyan">Select Tip %</span>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="w-full aspect-[5/2] rounded-md flex justify-center items-center font-bold bg-dark-cyan hover:bg-primary hover:text-dark-cyan text-white cursor-pointer">5%</div>
+              <div class="w-full aspect-[5/2] rounded-md flex justify-center items-center font-bold bg-dark-cyan hover:bg-primary hover:text-dark-cyan text-white cursor-pointer">10%</div>
+              <div class="w-full aspect-[5/2] rounded-md flex justify-center items-center font-bold bg-dark-cyan hover:bg-primary hover:text-dark-cyan text-white cursor-pointer">15%</div>
+              <div class="w-full aspect-[5/2] rounded-md flex justify-center items-center font-bold bg-dark-cyan hover:bg-primary hover:text-dark-cyan text-white cursor-pointer">25%</div>
+              <div class="w-full aspect-[5/2] rounded-md flex justify-center items-center font-bold bg-dark-cyan hover:bg-primary hover:text-dark-cyan text-white cursor-pointer">50%</div>
+              <div class="box w-full aspect-[5/2] rounded-md flex justify-center items-center font-bold hover:border-primary hover:border-2" contenteditable="true">Custom</div>
+            </div>
+          </div>
+          <div class="">
+            <div class="flex justify-between">
+              <span class="text-gray-cyan">Number of People</span>
+              <span class="text-red-500 hidden">Can't be zero</span>
+            </div>
+            <div class="relative w-[100]">
+              <span class="absolute left-3 bottom-3"><img src="./images/icon-person.svg" alt=""></span>
+              <input type="number" required
+                class="p-1 text-[24px] text-right text-dark-cyan rounded w-[100%]  hover:ring-2 hover:ring-primary !focus-visible:ring-2  cursor-pointer focus:outline-none invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="output bg-dark-cyan mx-10 my-10 px-10 text-white rounded-lg">
+        <div class="mt-10 flex justify-between ">
+          <div class="flex flex-col">
+            <span class="text-blue-50">Tip Amount</span>
+            <span class="text-gray-cyan">/ person</span>
+          </div>
+          <div class="text-3xl text-primary">$4.25</div>
+        </div>
+
+        <div class="mt-10 flex justify-between ">
+          <div class="flex flex-col">
+            <span class="text-blue-50">Total</span>
+            <span class="text-gray-cyan">/ person</span>
+          </div>
+          <div class="text-3xl text-primary">$32.79</div>
+        </div>
+
+        <div class="mt-16 sm:mt-10 md:mt-28 sm:mb-4">
+          <button class="text-dark-cyan bg-primary text-center align-middle mb-3 py-3 w-full rounded hover:bg-light-cyan-400">RESET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
